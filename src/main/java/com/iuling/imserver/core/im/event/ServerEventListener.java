@@ -23,10 +23,10 @@ public interface ServerEventListener
 	public void onUserLoginAction_CallBack(String userId, String extra, IoSession session);
 	public void onUserLogoutAction_CallBack(String userId, Object obj, IoSession session);
 	public boolean onTransBuffer_CallBack(String userId, String from_user_id
-            , String dataContent, String fingerPrint, int typeu, IoSession session);
+            , String dataContent, String fingerPrint, int typeu, int typem, IoSession session);
 	public void onTransBuffer_C2C_CallBack(String userId, String from_user_id
-            , String dataContent, String fingerPrint, int typeu);
+            , String dataContent, String fingerPrint, int typeu, int typem);
 	public boolean onTransBuffer_C2C_RealTimeSendFaild_CallBack(String userId
             , String from_user_id, String dataContent
-            , String fingerPrint, int typeu);
+            , String fingerPrint, int typeu, int typem);
 }

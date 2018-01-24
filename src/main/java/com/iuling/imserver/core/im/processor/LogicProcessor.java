@@ -74,7 +74,7 @@ public class LogicProcessor
 
 		boolean processedOK = this.serverCoreHandler.getServerEventListener().onTransBuffer_CallBack(
 				pFromClient.getTo(), pFromClient.getFrom(), pFromClient.getDataContent()
-				, pFromClient.getFp(), pFromClient.getTypeu(), session);
+				, pFromClient.getFp(), pFromClient.getTypeu(),pFromClient.getTypem(), session);
 	}
 	
 	public void processACK(Protocal pFromClient, String remoteAddress) throws Exception

@@ -60,13 +60,13 @@ public class ServerCoreHandler extends IoHandlerAdapter
     	BridgeProcessor bp = new BridgeProcessor(){
 			protected void realtimeC2CSuccessCallback(Protocal p){
 				serverEventListener.onTransBuffer_C2C_CallBack(
-						p.getTo(), p.getFrom(), p.getDataContent(), p.getFp(), p.getTypeu());
+						p.getTo(), p.getFrom(), p.getDataContent(), p.getFp(), p.getTypeu(),p.getTypem());
 			}
 
 			@Override
 			protected boolean offlineC2CProcessCallback(Protocal p){
 				return serverEventListener.onTransBuffer_C2C_RealTimeSendFaild_CallBack(
-						p.getTo(), p.getFrom(), p.getDataContent(), p.getFp(), p.getTypeu());
+						p.getTo(), p.getFrom(), p.getDataContent(), p.getFp(), p.getTypeu(),p.getTypem());
 			}
     	};
     	return bp;

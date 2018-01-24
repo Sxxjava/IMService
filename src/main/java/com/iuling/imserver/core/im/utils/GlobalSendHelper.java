@@ -70,7 +70,7 @@ public class GlobalSendHelper
 
 					boolean offlineProcessedOK = serverCoreHandler.getServerEventListener()
 							.onTransBuffer_C2C_RealTimeSendFaild_CallBack(pFromClient.getTo()
-									, pFromClient.getFrom(), pFromClient.getDataContent(), pFromClient.getFp(), pFromClient.getTypeu());
+									, pFromClient.getFrom(), pFromClient.getDataContent(), pFromClient.getFp(), pFromClient.getTypeu(),pFromClient.getTypem());
 					if(pFromClient.isQoS() && offlineProcessedOK)
 					{
 						needDelegateACK = true;
@@ -100,7 +100,7 @@ public class GlobalSendHelper
 			{
 				serverCoreHandler.getServerEventListener().onTransBuffer_C2C_CallBack(
 						pFromClient.getTo(), pFromClient.getFrom()
-						, pFromClient.getDataContent(), pFromClient.getFp(), pFromClient.getTypeu());
+						, pFromClient.getDataContent(), pFromClient.getFp(), pFromClient.getTypeu(),pFromClient.getTypem());
 			}
 			else
 			{
@@ -108,7 +108,7 @@ public class GlobalSendHelper
 
 				boolean offlineProcessedOK = serverCoreHandler.getServerEventListener()
 						.onTransBuffer_C2C_RealTimeSendFaild_CallBack(pFromClient.getTo()
-								, pFromClient.getFrom(), pFromClient.getDataContent(), pFromClient.getFp(), pFromClient.getTypeu());
+								, pFromClient.getFrom(), pFromClient.getDataContent(), pFromClient.getFp(), pFromClient.getTypeu(),pFromClient.getTypem());
 				if(pFromClient.isQoS() && offlineProcessedOK)
 				{
 					boolean receivedBackSendSucess = LocalSendHelper.replyDelegateRecievedBack(session, pFromClient);

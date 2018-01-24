@@ -4,7 +4,7 @@ mybatis:
 #datasource
 spring:
     datasource:
-        name: era
+        name: mainDatasource
         url: jdbc:postgresql://localhost:5432/IMDatabase?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
         username: postgres
         password: 123456

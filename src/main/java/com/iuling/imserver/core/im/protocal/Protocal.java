@@ -14,6 +14,7 @@ public class Protocal
 	private String fp = null;
 	private boolean QoS = false;
 	private int typeu = -1;
+	private int typem = 0;
 	private boolean isFull = true;
 	private transient int retryCount = 0;
 	
@@ -143,6 +144,8 @@ public class Protocal
 				, this.getDataContent(), this.getFrom(), this.getTo(), this.isQoS(), this.getFp());
 		cloneP.setBridge(this.bridge); // since 3.0
 		cloneP.setTypeu(this.typeu);   // since 3.0
+        cloneP.setTypem(this.typem);
+        cloneP.setFull(this.isFull);
 		return cloneP;
 	}
 	
@@ -158,4 +161,12 @@ public class Protocal
 	public void setFull(boolean full) {
 		isFull = full;
 	}
+
+    public int getTypem() {
+        return typem;
+    }
+
+    public void setTypem(int typem) {
+        this.typem = typem;
+    }
 }

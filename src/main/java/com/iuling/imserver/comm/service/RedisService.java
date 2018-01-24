@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-/**
- * Created by on 2017/3/1.
- */
 @Service
 public class RedisService {
 
